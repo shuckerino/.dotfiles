@@ -34,7 +34,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -189,10 +188,8 @@ bindsym $mod+r mode "resize"
 bar {
 status_command i3status
 position top
-output primary
 tray_output none
 font pango:DejaVu Sans Mono 10
-separator_symbol “⁞”
 }
 
 bindsym $mod+Shift+p exec --no-startup-id xrandr --output eDP --off
@@ -200,11 +197,13 @@ bindsym $mod+Shift+p exec --no-startup-id xrandr --output eDP --off
 exec --no-startup-id nm-appletexec --no-startup-id nm-applet
 
 # set background picture
-exec --no-startup-id nitrogen --set-auto ./Wallpaper/wallpaper1.jpg --head=0 && nitrogen --set-auto ./Wallpaper/wallpaper1.jpg  --head=1
+#exec --no-startup-id nitrogen --set-auto ~/.dotfiles/.config/i3/Wallpaper/wallpaper1.jpg --head=0
+
+exec --no-startup-id nitrogen --restore --head=0 && exec --no-startup-id nitrogen --restore --head=1
 
 # using this for transparent windows (terminals)
 exec --no-startup-id compton
 
 # enable natural scrolling 
-exec_always --no-startup-id xinput set-prop "MSFT0004:00 06CB:CD98 Touchpad" "libinput Natural Scrolling Enabled" 1
+#exec_always --no-startup-id xinput set-prop "MSFT0004:00 06CB:CD98 Touchpad" "libinput Natural Scrolling Enabled" 1
 
