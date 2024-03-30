@@ -192,6 +192,10 @@ tray_output none
 font pango:DejaVu Sans Mono 10
 }
 
+# remove title bar
+default_border pixel 1
+default_floating_border pixel 1
+
 bindsym $mod+Shift+p exec --no-startup-id xrandr --output eDP --off
 
 exec --no-startup-id nm-appletexec --no-startup-id nm-applet
@@ -205,5 +209,6 @@ exec --no-startup-id nitrogen --restore --head=0 && exec --no-startup-id nitroge
 exec --no-startup-id compton
 
 # enable natural scrolling 
-#exec_always --no-startup-id xinput set-prop "MSFT0004:00 06CB:CD98 Touchpad" "libinput Natural Scrolling Enabled" 1
+exec_always --no-startup-id xinput set-prop "MSFT0004:00 06CB:CD98 Touchpad" "libinput Natural Scrolling Enabled" 1
+
 
