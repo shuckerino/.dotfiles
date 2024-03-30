@@ -57,8 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -116,8 +115,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-
-#My custom aliases
-alias obsidian="~/AppImages/Obsidian-1.5.8.AppImage"
 . "$HOME/.cargo/env"
+
+
+# some custom aliases
+alias obsidian='cd ~/Obsidian; ./Obsidian-1.5.11.AppImage'
+alias gouni='cd ~/Desktop/Uni; git pull origin master; cd 6_Semester'
