@@ -117,8 +117,25 @@ if ! shopt -oq posix; then
 fi
 . "$HOME/.cargo/env"
 
+# some custom functions
+push_dotfiles(){
+
+    if [ -z "$1" ]
+	then
+	    echo "Please provide a commit message!"
+    else
+	cd ~/.dotfiles/
+	git add .
+	git commit -m "$1"
+	git push origin main
+	stow .
+	echo "Successfully pushed config changes and updated symbolic links!"
+    fi
+}
+
 
 # some custom aliases
 alias obsidian='cd ~/Obsidian; ./Obsidian-1.5.11.AppImage'
 alias gouni='cd ~/Desktop/Uni; git pull origin master; cd 6_Semester'
-
+alias pullconfig='cd ~/.dotfiles/; git pull origin main; stow .'
+alias pushconfig='push_dotfiles'
