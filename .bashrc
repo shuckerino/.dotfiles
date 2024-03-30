@@ -121,3 +121,7 @@ fi
 # some custom aliases
 alias obsidian='cd ~/Obsidian; ./Obsidian-1.5.11.AppImage'
 alias gouni='cd ~/Desktop/Uni; git pull origin master; cd 6_Semester'
+
+# change default config directory
+export XDG_CONFIG_HOME="$HOME/.dotfiles/.config"
+
