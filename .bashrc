@@ -120,7 +120,7 @@ fi
 # some custom functions
 push_dotfiles(){
 
-    if [ -z "$1" ]
+    if [ -z "$1" ] # checks if argument is null string
 	then
 	    echo "Please provide a commit message!"
     else
