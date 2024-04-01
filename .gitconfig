@@ -1,3 +1,5 @@
 [user]
 	email = rino.schu@gmail.com
 	name = Rino
+[alias]
+	root = rev-parse --show-toplevel
