@@ -117,7 +117,6 @@ push_dotfiles(){
     fi
 }
 
-alias cdroot='cd $(git root)'
 
 alias pullconfig='cd ~/.dotfiles/; git pull origin main; stow .'
 alias pushconfig='push_dotfiles'
