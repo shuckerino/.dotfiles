@@ -240,6 +240,7 @@ require('lazy').setup({
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
   { 'm4xshen/autoclose.nvim', opts = {} },
+  { 'ThePrimeagen/harpoon', opts = {} },
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`. This is equivalent to the following Lua:
   --    require('gitsigns').setup({ ... })
@@ -376,6 +377,25 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+
+      -- harpoon settings
+      local mark = require 'harpoon.mark'
+      local ui = require 'harpoon.ui'
+      vim.keymap.set('n', '<leader>a', mark.add_file)
+      vim.keymap.set('n', '<C-e>', ui.toggle_quick_menu)
+
+      vim.keymap.set('n', '<C-h>', function()
+        ui.nav_file(1)
+      end)
+      vim.keymap.set('n', '<C-t>', function()
+        ui.nav_file(2)
+      end)
+      vim.keymap.set('n', '<C-n>', function()
+        ui.nav_file(3)
+      end)
+      vim.keymap.set('n', '<C-s>', function()
+        ui.nav_file(4)
+      end)
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()

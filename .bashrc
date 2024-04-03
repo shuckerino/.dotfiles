@@ -135,7 +135,7 @@ push_dotfiles(){
 
 
 # some custom aliases
-alias obsidian='cd ~/Obsidian; ./Obsidian-1.5.11.AppImage'
+alias obsidian='cd ~/Obsidian; ./Obsidian-AppImage'
 alias gouni='cd ~/Desktop/Uni; git pull origin master; cd 6_Semester'
 alias pullconfig='cd ~/.dotfiles/; git pull origin main; stow .'
 alias pushconfig='push_dotfiles'
