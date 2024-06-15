@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -71,7 +71,6 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-plugins=(zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,25 +99,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-
-# some custom functions
-push_dotfiles(){
-
-    if [ -z "$1" ] # checks if argument is null string
-	then
-	    echo "Please provide a commit message!"
-    else
-	cd ~/.dotfiles/
-	git add .
-	git commit -m "$1"
-	git push origin main
-	stow .
-	echo "Successfully pushed config changes and updated symbolic links!"
-    fi
-}
-
-
-alias pullconfig='cd ~/.dotfiles/; git pull origin main; stow .'
-alias pushconfig='push_dotfiles'
-alias cdroot='cd $(git root)'
