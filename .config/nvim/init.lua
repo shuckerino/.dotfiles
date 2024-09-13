@@ -93,6 +93,14 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = false
 
+-- For Nvim Treesitter
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- optionally enable 24-bit colour
+vim.opt.termguicolors = true
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
@@ -241,6 +249,7 @@ require('lazy').setup({
   { 'numToStr/Comment.nvim', opts = {} },
   { 'm4xshen/autoclose.nvim', opts = {} },
   { 'ThePrimeagen/harpoon', opts = {} },
+  { 'nvim-tree/nvim-tree.lua', opts = {} },
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`. This is equivalent to the following Lua:
   --    require('gitsigns').setup({ ... })
