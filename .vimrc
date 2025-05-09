@@ -8,4 +8,4 @@ set hlsearch
 set ruler
 colorscheme desert
 highlight Comment ctermfg=green
-
+set clipboard=unnamed
