@@ -263,8 +263,8 @@ require('lazy').setup({
     },
     opts = {},
     keys = {
-      { '<leader>po', '<cmd>OmniPreview start<CR>', desc = 'OmniPreview Start' },
-      { '<leader>pc', '<cmd>OmniPreview stop<CR>', desc = 'OmniPreview Stop' },
+      { '<leader>sp', '<cmd>OmniPreview start<CR>', desc = 'OmniPreview Show' },
+      { '<leader>cp', '<cmd>OmniPreview stop<CR>', desc = 'OmniPreview Close' },
     },
   },
   -- Here is a more advanced example where we pass configuration
