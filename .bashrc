@@ -140,3 +140,9 @@ alias gouni='cd ~/Desktop/Uni; git pull origin master; cd 6_Semester'
 alias pullconfig='cd ~/.dotfiles/; git pull origin main; stow .'
 alias pushconfig='push_dotfiles'
 alias cdroot='cd $(git root)'
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+. "$HOME/.local/bin/env"
