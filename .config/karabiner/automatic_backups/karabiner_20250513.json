@@ -161,7 +161,7 @@
                         ]
                     },
                     {
-                        "description": "App Launcher Sublayer (Hyper + E)",
+                        "description": "App Launcher Sublayer (Hyper + e)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -171,12 +171,12 @@
                                         "value": 1
                                     },
                                     {
-                                        "name": "hyper_sublayer_e",
+                                        "name": "hyper_sublayer_w",
                                         "type": "variable_if",
                                         "value": 0
                                     }
                                 ],
-                                "description": "Toggle Hyper sublayer E",
+                                "description": "Toggle Hyper sublayer e",
                                 "from": {
                                     "key_code": "e",
                                     "modifiers": { "optional": ["any"] }

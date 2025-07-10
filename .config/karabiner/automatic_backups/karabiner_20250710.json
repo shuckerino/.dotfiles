@@ -171,14 +171,14 @@
                                         "value": 1
                                     },
                                     {
-                                        "name": "hyper_sublayer_e",
+                                        "name": "hyper_sublayer_w",
                                         "type": "variable_if",
                                         "value": 0
                                     }
                                 ],
                                 "description": "Toggle Hyper sublayer E",
                                 "from": {
-                                    "key_code": "e",
+                                    "key_code": "E",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
