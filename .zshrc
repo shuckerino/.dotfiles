@@ -108,3 +108,4 @@ source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 chruby ruby-3.4.1
 # alias ohmyzsh="mate ~/.oh-my-zsh
 PATH="$PATH:/snap/bin"
+export PATH=/opt/homebrew/anaconda3/bin:$PATH

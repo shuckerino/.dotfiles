@@ -295,16 +295,16 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>a', mark.add_file)
       vim.keymap.set('n', '<C-e>', ui.toggle_quick_menu)
 
-      vim.keymap.set('n', '<C-h>', function()
+      vim.keymap.set('n', '<C-1>', function()
         ui.nav_file(1)
       end)
-      vim.keymap.set('n', '<C-t>', function()
+      vim.keymap.set('n', '<C-2>', function()
         ui.nav_file(2)
       end)
-      vim.keymap.set('n', '<C-n>', function()
+      vim.keymap.set('n', '<C-3>', function()
         ui.nav_file(3)
       end)
-      vim.keymap.set('n', '<C-s>', function()
+      vim.keymap.set('n', '<C-4>', function()
         ui.nav_file(4)
       end)
 
@@ -671,7 +671,7 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'desert'
+      vim.cmd.colorscheme 'slate'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
