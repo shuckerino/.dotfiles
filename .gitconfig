@@ -3,3 +3,5 @@
 	name = Schuster, Rinaldo
 [alias]
 	root = rev-parse --show-toplevel
+[core]
+	excludesfile = /Users/rino/.gitignore_global
