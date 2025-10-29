@@ -109,3 +109,6 @@ chruby ruby-3.4.1
 # alias ohmyzsh="mate ~/.oh-my-zsh
 PATH="$PATH:/snap/bin"
 export PATH=/opt/homebrew/anaconda3/bin:$PATH
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
